@@ -20,9 +20,9 @@ public class Goal : MonoBehaviour
         
     }
     
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Ball")
+        if (other.gameObject.CompareTag("Ball"))
         {
             GameObject instance = Instantiate(ballPrefab);
             instance.transform.position = spawnPoint.transform.position;

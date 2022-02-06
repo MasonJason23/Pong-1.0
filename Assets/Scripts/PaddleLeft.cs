@@ -14,6 +14,14 @@ public class PaddleLeft : MonoBehaviour
     {
         ball = GameObject.FindWithTag("Ball").GetComponent<Ball>();
     }
+    
+    private void Update()
+    {
+        if (!ball)
+        {
+            ball = GameObject.FindWithTag("Ball").GetComponent<Ball>();
+        }
+    }
 
     private void FixedUpdate()
     {
@@ -27,7 +35,7 @@ public class PaddleLeft : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Ball")
+        if (collision.gameObject.CompareTag("Ball"))
         {
             ReflectBall();
         }
@@ -35,7 +43,7 @@ public class PaddleLeft : MonoBehaviour
 
     private void ReflectBall()
     {
-        float angle = 60f;
+        float angle = 30f;
         float positionZ = Mathf.Ceil(transform.position.z * 10f);
         // Debug.Log("Paddle position:" + positionZ);
 
@@ -45,7 +53,7 @@ public class PaddleLeft : MonoBehaviour
         }
         angle += positionZ * 2.5f;
         Vector3 rotateVec = Quaternion.Euler(0f, angle, 0f) * Vector3.right;
-        Vector3 reflect = rotateVec * 15f;
+        Vector3 reflect = rotateVec * 10f;
         
         Rigidbody rBall = ball.GetComponent<Rigidbody>();
         rBall.AddForce(reflect, ForceMode.VelocityChange);

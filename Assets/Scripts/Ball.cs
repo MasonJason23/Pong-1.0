@@ -18,16 +18,28 @@ public class Ball : MonoBehaviour
         rbody.AddForce(force, ForceMode.Impulse);
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        
+        ballSpd += Time.deltaTime * 10f;
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Right Goal" || other.gameObject.name == "Left Goal")
+        if (other.gameObject.CompareTag("Left Goal"))
         {
-            Debug.Log(this.gameObject.name + " reached a goal");
+            ScoringSystem.scoreP2 += 1;
+            Debug.Log("Player Two Scored!");
+        }
+        else if (other.gameObject.CompareTag("Right Goal"))
+        {
+            ScoringSystem.scoreP1 += 1;
+            Debug.Log("Player One Scored!");
+        }
+        
+        Debug.Log("Current Score: P1 - " + ScoringSystem.scoreP1 + " | P2 - " + ScoringSystem.scoreP2);
+        
+        if (other.gameObject.CompareTag("Left Goal") || other.gameObject.CompareTag("Right Goal"))
+        {
             Destroy(this.gameObject);
         }
     }
