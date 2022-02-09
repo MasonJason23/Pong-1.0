@@ -44,14 +44,9 @@ public class PaddleRight : MonoBehaviour
     private void ReflectBall()
     {
         float angle = 30f;
-        float positionZ = Mathf.Ceil(transform.position.z * 10f);
+        // float positionZ = Mathf.Ceil(transform.position.z * 10f);
         // Debug.Log("Paddle position:" + positionZ);
-
-        if (positionZ > 0)
-        {
-            angle *= -1;
-        }
-        angle += positionZ * 2.5f;
+        
         Vector3 rotateVec = Quaternion.Euler(0f, angle, 0f) * Vector3.left;
         Vector3 reflect = rotateVec * 10f;
 

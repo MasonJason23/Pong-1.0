@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5442546848245110534}
   - component: {fileID: 5442546848245110535}
   - component: {fileID: 5442546848245110532}
-  - component: {fileID: 5442546848245110533}
   - component: {fileID: 5442546848245110537}
   - component: {fileID: 5442546848245110536}
+  - component: {fileID: -8226428059920762779}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Untagged
@@ -84,19 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5442546848245110533
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5442546848245110530}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 2, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5442546848245110537
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,3 +113,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpd: 80
+--- !u!136 &-8226428059920762779
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5442546848245110530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5000001
+  m_Height: 2.0000005
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
