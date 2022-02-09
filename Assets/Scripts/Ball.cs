@@ -12,7 +12,6 @@ public class Ball : MonoBehaviour
     void Start()
     {
         ballSpd = 300f;
-
         Vector3 force = -Vector3.left * ballSpd * Time.deltaTime;
         Rigidbody rbody = GetComponent<Rigidbody>();
         rbody.AddForce(force, ForceMode.Impulse);
@@ -20,7 +19,7 @@ public class Ball : MonoBehaviour
 
     void FixedUpdate()
     {
-        ballSpd += Time.deltaTime * 10f;
+        ballSpd += Time.deltaTime * 20f;
     }
 
     void OnTriggerEnter(Collider other)

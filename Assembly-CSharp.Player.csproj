@@ -55,8 +55,7 @@
      <Compile Include="Assets\Scripts\Goal.cs" />
      <Compile Include="Assets\Scripts\Ball.cs" />
      <Compile Include="Assets\Scripts\ScoringSystem.cs" />
-     <Compile Include="Assets\Scripts\PaddleLeft.cs" />
-     <Compile Include="Assets\Scripts\PaddleRight.cs" />
+     <Compile Include="Assets\Scripts\Player.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
