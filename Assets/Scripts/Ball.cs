@@ -6,20 +6,20 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    private float ballSpd;
+    private float ballSpd = 200f;
+    private Vector3 currentSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
-        ballSpd = 300f;
-        Vector3 force = -Vector3.left * ballSpd * Time.deltaTime;
+        Vector3 force = Vector3.left * ballSpd * Time.deltaTime;
+        if (ScoringSystem.playerOneScored)
+        {
+            force *= -1;
+        }
+        
         Rigidbody rbody = GetComponent<Rigidbody>();
         rbody.AddForce(force, ForceMode.Impulse);
-    }
-
-    void FixedUpdate()
-    {
-        ballSpd += Time.deltaTime * 20f;
     }
 
     void OnTriggerEnter(Collider other)
@@ -27,12 +27,12 @@ public class Ball : MonoBehaviour
         if (other.gameObject.CompareTag("Left Goal"))
         {
             ScoringSystem.scoreP2 += 1;
-            Debug.Log("Player Two Scored!");
+            ScoringSystem.playerOneScored = false;
         }
         else if (other.gameObject.CompareTag("Right Goal"))
         {
             ScoringSystem.scoreP1 += 1;
-            Debug.Log("Player One Scored!");
+            ScoringSystem.playerOneScored = true;
         }
         
         Debug.Log("Current Score: P1 - " + ScoringSystem.scoreP1 + " | P2 - " + ScoringSystem.scoreP2);

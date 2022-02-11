@@ -8,6 +8,7 @@ public class ScoringSystem : MonoBehaviour
 {
     public static int scoreP1;
     public static int scoreP2;
+    public static bool playerOneScored;
     public TextMeshProUGUI playerOneText;
     public TextMeshProUGUI playerTwoText;
     
