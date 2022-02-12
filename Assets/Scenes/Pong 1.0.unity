@@ -1580,6 +1580,22 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6859192173473044118, guid: 1075a7c021bd54240b16c17a0149494a, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859192173473044118, guid: 1075a7c021bd54240b16c17a0149494a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859192173473044118, guid: 1075a7c021bd54240b16c17a0149494a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859192173473044118, guid: 1075a7c021bd54240b16c17a0149494a, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -5726292430662780878, guid: 1c60207880675f64b929c63c3d2965c3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1075a7c021bd54240b16c17a0149494a, type: 3}
 --- !u!1001 &5442546847475657025

@@ -11,7 +11,7 @@ public class ScoringSystem : MonoBehaviour
     public static bool playerOneScored;
     public TextMeshProUGUI playerOneText;
     public TextMeshProUGUI playerTwoText;
-    
+
     void Update()
     {
         playerOneText.text = $"Player One - {scoreP1}";

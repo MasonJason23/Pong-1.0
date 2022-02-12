@@ -24,6 +24,11 @@ public class Ball : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        /*
+         * Todo
+         * Ball plays sound effect when bouncing off a wall
+         */
+
         if (other.gameObject.CompareTag("Left Goal"))
         {
             ScoringSystem.scoreP2 += 1;
@@ -34,9 +39,7 @@ public class Ball : MonoBehaviour
             ScoringSystem.scoreP1 += 1;
             ScoringSystem.playerOneScored = true;
         }
-        
-        Debug.Log("Current Score: P1 - " + ScoringSystem.scoreP1 + " | P2 - " + ScoringSystem.scoreP2);
-        
+
         if (other.gameObject.CompareTag("Left Goal") || other.gameObject.CompareTag("Right Goal"))
         {
             Destroy(this.gameObject);
