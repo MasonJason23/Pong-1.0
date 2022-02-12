@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4934833644363102171}
   - component: {fileID: 4934833644363102164}
   - component: {fileID: 4934833644363102175}
-  - component: {fileID: 4934833644363102168}
   - component: {fileID: 6859192173473044118}
+  - component: {fileID: 4934833644363102168}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -114,18 +114,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &4934833644363102168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4934833644363102165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 111e361f808dc3742a287912a3b2a1ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &6859192173473044118
 AudioSource:
   m_ObjectHideFlags: 0
@@ -136,11 +124,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -5726292430662780878, guid: 1c60207880675f64b929c63c3d2965c3, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 5a3ee8f45cb13244ab69890dd25191c3, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -222,3 +210,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4934833644363102168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4934833644363102165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111e361f808dc3742a287912a3b2a1ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: e40fd01fee79d494cb6244b6b92a826c, type: 3}

@@ -6,11 +6,13 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    private float ballSpd = 200f;
+    public AudioClip audioClip;
+    
     private Vector3 currentSpeed;
+    private float ballSpd = 200f;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         Vector3 force = Vector3.left * ballSpd * Time.deltaTime;
         if (ScoringSystem.playerOneScored)
@@ -21,14 +23,17 @@ public class Ball : MonoBehaviour
         Rigidbody rbody = GetComponent<Rigidbody>();
         rbody.AddForce(force, ForceMode.Impulse);
     }
-
-    void OnTriggerEnter(Collider other)
+    
+    private void OnCollisionEnter(Collision collision)
     {
-        /*
-         * Todo
-         * Ball plays sound effect when bouncing off a wall
-         */
+        if (collision.gameObject.CompareTag("Border"))
+        {
+            playAudio();
+        }
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
         if (other.gameObject.CompareTag("Left Goal"))
         {
             ScoringSystem.scoreP2 += 1;
@@ -44,5 +49,12 @@ public class Ball : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+    
+    private void playAudio()
+    {
+        AudioSource audioSrc = GetComponent<AudioSource>();
+        audioSrc.clip = audioClip;
+        audioSrc.Play();
     }
 }

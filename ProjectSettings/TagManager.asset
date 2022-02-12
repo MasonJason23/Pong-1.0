@@ -7,6 +7,7 @@ TagManager:
   - Ball
   - Left Goal
   - Right Goal
+  - Border
   layers:
   - Default
   - TransparentFX

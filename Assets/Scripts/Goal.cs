@@ -8,7 +8,7 @@ public class Goal : MonoBehaviour
     public GameObject ballPrefab;
     public Transform spawnPoint;
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Ball"))
         {

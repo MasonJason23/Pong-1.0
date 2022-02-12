@@ -12,7 +12,7 @@ public class ScoringSystem : MonoBehaviour
     public TextMeshProUGUI playerOneText;
     public TextMeshProUGUI playerTwoText;
 
-    void Update()
+    private void Update()
     {
         playerOneText.text = $"Player One - {scoreP1}";
         playerTwoText.text = $"Player Two - {scoreP2}";
