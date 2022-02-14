@@ -8,6 +8,8 @@ TagManager:
   - Left Goal
   - Right Goal
   - Border
+  - P1
+  - P2
   layers:
   - Default
   - TransparentFX
